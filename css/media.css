@@ -1,0 +1,7 @@
+
+
+@media screen and (min-width: 1024px){
+    .hero-img img{
+    aspect-ratio: 3/2;
+  }
+}

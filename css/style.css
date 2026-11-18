@@ -1,0 +1,429 @@
+*{
+    box-sizing: border-box;
+}
+/* global style */
+
+:root{
+    scrollbar-gutter: auto;
+
+    --main-color:#CBFE1C;
+    --body-bg-color:#0B0E13;
+    --contact-color:#0E131E;
+    --color-white:white;
+    --color-transparent:transparent;
+    --border-color:linear-gradient(#08E073,#CBFE1C);
+    --color-black:black;
+    --bg-color:#1E2939;
+    --card-color:#1A1A1A;
+    --color-gray:gray;
+    --form-volor:#364153
+
+}
+/* ================== */
+/* *colors */
+.contact-color{
+    background-color: var(--contact-color);
+}
+.text-color{
+    color: var(--main-color);
+}
+.text-white{
+    color: var(--color-white);
+}
+.main-color{
+    color: var(--main-color);
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.body-color{
+    background-color: var(--body-bg-color);
+}
+.bg-color{
+    background-color: var(--bg-color);
+}
+.bg-card{
+    background-color: var(--card-color);
+}
+.text-gray{
+    color: var(--color-gray);
+}
+.form-color{
+    background-color: var(--form-volor);
+}
+/* *bg */
+.bg-navbar{
+    background-color: var(--body-bg-color);
+}
+
+/* ================== */
+@font-face {
+    font-family: Days-One;
+    src: url(../fonts/DaysOne-Regular.ttf);
+}
+body{
+    margin: 0;
+    font-family: Days-One;
+    
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-block: 5px;
+}
+a,span{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    padding-left: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.py-8{
+    padding-block: 5rem;
+}
+img{
+    width: 100%;
+    display: block;
+}
+button{
+    text-decoration: none;
+    border: 0;  
+}
+.max-w-600{
+    max-width: 600px;
+}
+
+/* ===================================== */
+/* *navbar start */
+.navbar{
+    font-family: "Chakra Petch", sans-serif;
+}
+.navbar-nav .nav-link.active{
+    color: var(--main-color);
+}
+.nav-link {
+    transition: color 0.2s;
+   
+}
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.theme-primary{
+    background-color: var(--main-color);
+}
+.drawer-body .navbar-nav .fa-regular:hover{
+    color: #CBFE1C;
+}
+.navbar .nav-link.active {
+  color: #cbfe1c;
+}
+/* *navbar end   */
+/* *============================ */
+/* *hero start   */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-text p{
+    line-height: 1.8;
+}
+.buttons button{
+    border: #CBFE1C 1px solid;
+}
+
+.img-thumbnail{
+    background: linear-gradient(#CBFE1C,#09DF72);
+}
+.hero-img .badge{
+    bottom: -20px;
+    left: -40px;
+}
+.hero-text button:last-child:hover{
+    background-color: var(--main-color);
+    color: #000;
+}
+/* *hero end     */
+/* ================================ */
+/* *our games start */
+.section-label {
+    letter-spacing: 4px;
+    display: inline-flex;
+    font-family: "Chakra Petch", sans-serif;
+}
+.section-label::before,
+.section-label::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+}
+.section-label::before{
+    background: linear-gradient(to right ,transparent,#c6f81c);
+}
+.section-label::after {
+    background: linear-gradient(to left, transparent, #cbfe1c);
+}
+.badge-img {
+    top: -50%;
+    left: 20px;
+    transition:all 0.5s;
+}
+.carousel-caption{
+    bottom: -50%;
+    left: 20px;
+    transition:all 0.5s;
+}
+
+.carousel-item:hover .badge-img{
+    left: 20px;
+    top: 20px;
+}
+.carousel-item:hover .carousel-caption{
+
+    left: 20px;
+    bottom: 20px;
+
+}
+.inner{
+    transition:border 0.5s ;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.carousel-inner .inner::after{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(203,254,28,0.75), transparent 60%);
+    opacity: 0;
+    inset: 0;
+    transition: opacity 0.5s;
+    border-radius: inherit;
+}
+.inner:hover::after{
+    opacity: 1;
+    border: 2px solid var(--main-color);
+}
+.carousel-item img{
+    transition:transform 0.5s;
+}
+.carousel-item:hover img{
+    transform: scale(1.05);
+}
+.carousel button:last-child{
+    border: var(--main-color) 1px solid;
+}
+.carousel button:last-child:hover{
+    background-color: var(--main-color);
+    color: var(--color-black);
+}
+.btn-icon{
+    border: #425576 1px solid;
+}
+.btn-icon:hover{
+    border: var(--main-color) 1px solid;    
+    background-color: transparent;
+}
+
+
+/* *our games end   */
+/* ==================================== */
+/* *what we do start */
+
+.Chakra-font{
+    font-family: "Chakra Petch", sans-serif;
+}
+.icon-box i {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.card-translucent{
+    aspect-ratio: 1/1;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.card-translucent::before,.card-translucent::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-color);
+    opacity: 0;
+    transition: 0.3s;
+}
+.card-translucent::before{
+    top: -120px;
+    left: -120px;
+    clip-path: polygon(0 0,100% 0,0 100%);
+}
+.card-translucent::after{
+    bottom: -120px;
+    right: -120px;
+    clip-path: polygon(100% 0,100% 100%, 0 100%);
+}
+.card-translucent:hover::before{
+    opacity: 1;
+    top: 12px;
+    left: 12px;
+}
+.card-translucent:hover::after{
+    opacity: 1;
+    bottom: 12px;
+    right: 12px;
+}
+.what-we-do .card-translucent:hover{
+    border-color: var(--main-color);
+}
+.what-we-do .card{
+    border: #1E2939 1px solid;
+}
+.card-translucent:hover .icon-box {
+  background-color: #cbfe1c;
+  
+}
+.card-translucent:hover .icon-box i{
+  color: #000;;
+  
+}
+/* *what-we-do end */
+/* ================================== */
+/* *logo section start */
+.logos-section{
+    background:radial-gradient(ellipse at center,#CBFE1C,#0B0E13 60%) ;
+}
+.logo-box{
+    width: 100px;
+}
+.logo-row .logo-track{
+    width: max-content;
+    animation: slide 40s linear infinite;
+}
+.logo-row .logos-reverse{
+    animation-direction: reverse;
+}
+@keyframes slide {
+   from { transform:translateX(0);  } 
+   to { transform: translateX(-50%); }
+}
+.logos-section::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    margin: 0 auto 40px;
+    background: linear-gradient(to tight,transparent,red,transparent);
+    
+}
+/* *logo section end  */
+/* ============================= */
+/* *our team start */
+
+
+
+.card-team::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: grayscale(100%);
+  transition: transform 0.9s;
+  z-index: 1;
+}
+
+.team-info {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    transition: 0.4s;
+    
+}
+
+.card-team:hover::before{
+    transform: translateY(-100%);
+} 
+.card-team:hover .team-role ,.vertical-name {
+    color: var(--main-color);
+}
+.vertical-name {
+  writing-mode: vertical-rl;
+  bottom: 10px;
+  right: 10px;
+  
+}
+
+/* *our team end   */
+/* =============================== */
+/* *contact start  */
+
+.Community{
+    color: var(--body-bg-color);
+    background:linear-gradient(to left,#08E073,#CBFE1C);
+}
+
+.form-color {
+  border-color: rgba(239, 238, 238, 0.296);
+  box-shadow: none;
+}
+.form-control{
+    transition: 0.3s;
+    
+}
+.form-control:focus{
+    border: var(--main-color) 1px solid;
+    box-shadow: none;
+    outline: none;
+}
+.form-control::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.inner-form .footer-form{
+    border-top: 2px #2b3543 solid;
+}
+/* *contact end    */
+/* ======================== */
+/* *footer start */
+.footer-text,
+.footer-link {
+  color: #a8afc7;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #cbfe1c;
+}
+
+.footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.6s;
+}
+
+
+.shine-btn:hover::before {
+  left: 100%;
+}
+.shine-btn {
+  background-color: #cbfe1c;
+  transition: background-color 0.3s;
+}
+
+.shine-btn:hover {
+  background-color: #b5e612;
+}
+/* *footer end */
+
+
+
